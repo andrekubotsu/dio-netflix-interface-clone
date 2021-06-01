@@ -1,0 +1,137 @@
+:root{
+    --red: #E50914;
+    --black: #141414;
+    --light-grey: #aaa;
+    --white: #fff
+}   
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--black);
+    font-family:Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+
+/* Header and menu */
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+header .logo{
+    width: 150px;
+    margin-left: 10px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--light-grey);
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: var(--white);
+}
+
+/* Main */
+
+main .main-movie{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)100%), url('../assets/imgs/raya-cover.jpg');
+    background-size: cover;
+    background-position: center;
+
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+}
+
+main .main-movie .container{
+    padding: 0 30px;
+    width: 70%;
+}
+
+main .main-movie .container .title img{
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+main .main-movie .container .description {
+    margin-bottom:40px;
+}
+
+main .main-movie .container .buttons .button{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+main .main-movie .container .buttons .button i{
+    margin-right: 8px;
+}
+
+main .main-movie .container .buttons .button:hover{
+    background-color: white;
+    color:black;
+}
+
+.movie-box {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    header .container{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+
+    header .logo{
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    main .main-movie{
+        height: 440px;
+    }
+    
+    main .main-movie .container{
+        text-align: center;
+        
+        width: 100%;
+    }
+
+    main .main-movie .container .title img{
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    main .main-movie .container .buttons .button{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+      
+}
